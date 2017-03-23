@@ -145,6 +145,7 @@ void Can_LD::Data_Analysis(struct can_frame *fr)
     printf("\n");
 */
     //解析接收到帧数据
+    cout<<"Can_ID"<<(fr->can_id&0x7F)<<endl;
 	switch(fr->can_id>>7)
 	{
 	//电流

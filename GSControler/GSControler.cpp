@@ -55,9 +55,7 @@ void GScontroler::InitInstance()
                      GS_SystemLog,
                      SLOT(WriteSystemLog(string)));
     GS_SystemLog->WriteSystemLog("Start GSControler ");
-     cout<<"\r\n run0 here";
     GsSoftswitch->InitInstance();
-    cout<<"\r\n run2 here";
     GsSoftswitch->start();
 
     //GsSoftswitch->GsGui = this->GsGui;

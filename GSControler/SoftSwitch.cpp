@@ -108,7 +108,6 @@ bool CSoftSwitch::InitInstance()
     connect(CanRecv,SIGNAL(Int_Alarm(unsigned char,unsigned char)),this,SLOT(Int_Alarm(unsigned char,unsigned char)));
     HardwarePlatform();
     InitNetworkStructure();
-    cout<<"\r\n here"<<endl;
     SystemInit();
 
 
@@ -1298,16 +1297,15 @@ bool CSoftSwitch::HardwarePlatform()
         boards[i].LD=new LDKeeper[iTemp];
         boards[i].CAN_ID=i+2;
         m_nLDcnt+=iTemp;
- //       cout<<"\r\n boards["<<i<<"].Can_ID:"<<boards[i].CAN_ID<<",ExistdLD:"<<boards[i].ExistLD<<endl;
     }
-    cout<<"m_nLDcnt="<<m_nLDcnt<<endl;
+//    cout<<"m_nLDcnt="<<m_nLDcnt<<endl;
     m_bdBoardArray= new BoardIndex[m_nLDcnt];
     iTemp=0;
     for(i=0;i<m_nBoard;i++)
     {   for(j=0;j<boards[i].ExistLD;j++)
         {   m_bdBoardArray[iTemp+j].BoardNo=i;
             m_bdBoardArray[iTemp+j].LDNo=j;
-            cout<<"\r\n m_bdBoardArray["<<iTemp+j<<"]:BoarNo:"<<m_bdBoardArray[iTemp+j].BoardNo<<",LDNo:"<<m_bdBoardArray[iTemp+j].LDNo<<endl;
+   //         cout<<"\r\n m_bdBoardArray["<<iTemp+j<<"]:BoarNo:"<<m_bdBoardArray[iTemp+j].BoardNo<<",LDNo:"<<m_bdBoardArray[iTemp+j].LDNo<<endl;
         }
         iTemp+=boards[i].ExistLD;
     }

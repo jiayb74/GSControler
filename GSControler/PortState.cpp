@@ -82,11 +82,11 @@ void PortState::cheakport()
         //最坏的情况就是快到200ms时，如果操作发送抖动，可能电平不变(不满足，因为
         //跳变总要想发送变化，那么在下一个200MS再判断肯定就行啦。响应不急时)或跳变（满足要求）。
            if(value == '0'){
-               // cout<<"guanji"<<endl;
+   //             cout<<"guanji"<<endl;
                 emit SwitchState(false);
            }
            else{
-              //  cout<<"kaiji"<<endl;
+    //            cout<<"kaiji"<<endl;
                 emit SwitchState(true);
            }
        }
