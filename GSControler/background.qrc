@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/image">
+        <file>image/idle.bmp</file>
+        <file>image/about.bmp</file>
+        <file>image/config.bmp</file>
+        <file>image/reset.bmp</file>
+        <file>image/launch.bmp</file>
+        <file>image/initial.bmp</file>
+        <file>image/shutting.bmp</file>
+        <file>image/lasing.bmp</file>
+        <file>image/error.bmp</file>
+        <file>image/calibrate.bmp</file>
+        <file>image/backall.bmp</file>
+        <file>image/70backall.bmp</file>
+    </qresource>
+</RCC>
